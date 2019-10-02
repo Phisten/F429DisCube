@@ -33,7 +33,7 @@
         {
             "label": "flash",
             "type": "shell",
-            "command": "openocd -f board\\stm32f7discovery.cfg -c \"init\" -c \"reset halt\" -c \"flash write_image erase bin/stm32f746.elf\" -c \"reset run\" -c \"shutdown\"",
+            "command": "openocd -f board\\stm32f4discovery.cfg -c \"init\" -c \"reset halt\" -c \"flash write_image erase bin/stm32f429.elf\" -c \"reset run\" -c \"shutdown\"",
             "group": "build",
             "presentation": {
                 "focus": true
@@ -43,10 +43,11 @@
         {
             "label": "openocd",
             "type": "shell",
-            "command": "openocd",
-            "args": [
-                "-f ./openocd.cfg"
-            ]
+            "command": "openocd"
+            // ,
+            // "args": [
+            //     "-f ${workspaceRoot}/openocd.cfg"
+            // ]
         }
     ]
 }
